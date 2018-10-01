@@ -19,8 +19,9 @@ public class GetForumDataTest {
 
     BaseTest baseTest = new BaseTest();
 
+    //Посылается get-запрос с двумя параметрами
     @Test
-    public void test3() throws IOException {
+    public void verifyResponseCodeWithTwoParametrsInt() throws IOException {
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request = new HttpGet("http://api.rutracker.org/v1/get_forum_data?by=forum_id&val=1%2C2");
         HttpResponse response = null;
@@ -36,12 +37,11 @@ public class GetForumDataTest {
         sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
         //!Отличаются секунды
         assertEquals(headers[1].getValue(),sdf.format(datePP),"Дата,сгенерированная автоматически не совпадает с датой из Результата");
-
     }
 
-    //Посылается get-запрос с двумя параметрами
+
     @Test
-    public void test4() throws IOException {
+    public void verifyResponseCodeWithParametrInt() throws IOException {
         String url = "http://api.rutracker.org/v1/get_forum_data?by=forum_id&val=1%2C7";
         JSONObject result = new JSONObject(baseTest.getStringByUrl(url));
         Object one = result.opt("1");
@@ -51,16 +51,16 @@ public class GetForumDataTest {
 
 
     @Test
-    public void test6() throws IOException {
-        //Проверяем, что отправленный запрос с парамтром, равным длине переменной типа long вернулся ответом без ошибок
+    public void verifyResponseCodeWithBigValueParametrLong() throws IOException {
         String url = "http://api.rutracker.org/v1/get_forum_data?by=forum_id&val=9223372036854775807";
-        baseTest.getStringByUrl(url);
+        //Проверяем код ответа с сервера.Должен быть 200
+        assertEquals(baseTest.getResponseCode(url),200);
     }
 
     @Test
-    public void test7() throws IOException {
-        //Проверяем, что отправленный запрос с парамтром, равным длине переменной типа int вернулся ответом без ошибок
+    public void verifyResponseCodeWithBigValueParametrInt() throws IOException {
         String url = "http://api.rutracker.org/v1/get_forum_data?by=forum_id&val=2147483647";
-        baseTest.getStringByUrl(url);
+        //Проверяем код ответа с сервера.Должен быть 200
+        assertEquals(baseTest.getResponseCode(url),200);
     }
 }
