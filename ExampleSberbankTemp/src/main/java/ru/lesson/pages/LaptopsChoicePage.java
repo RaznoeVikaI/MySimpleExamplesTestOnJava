@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class LaptopsChoicePage extends AbstractPage {
 
@@ -42,7 +43,7 @@ public class LaptopsChoicePage extends AbstractPage {
     }
 
 
-    public void chouseCountDisplayedNotebooksOnPage(){
+    public void chouseCountDisplayedNotebooksOnPage() throws InterruptedException {
         //By.xpath(".//*[@role='listbox']"
         //By.xpath(".//option[contains(text(),'Показывать по 12')]")
         //Кликает по выпадающему списку:"Показать по 12","Показать по 48"
@@ -53,7 +54,7 @@ public class LaptopsChoicePage extends AbstractPage {
         selectElem.click();
         WebElement element = driver.findElement(By.xpath("//span[@class='select__text' and text()='Показывать по 12']"));
         element.click();
-        WebElement element2 = (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='n-snippet-card2__title']")));
+        Thread.sleep(7000);
         List<WebElement> temp2 = driver.findElements(By.xpath("//div[@class='n-snippet-card2__title']"));
         System.out.println(temp2.size());
     }

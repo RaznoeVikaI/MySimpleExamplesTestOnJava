@@ -116,8 +116,8 @@
       <file leaf-file-name="LaptopsChoicePage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/lesson/pages/LaptopsChoicePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+            <state relative-caret-position="344">
+              <caret line="57" column="105" lean-forward="false" selection-start-line="57" selection-start-column="105" selection-end-line="57" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -415,12 +415,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest - 2018.10.02 at 13h 59m 21s.xml">
-      <configuration name="FirstTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FirstTest - 2018.10.02 at 14h 00m 42s.xml">
-      <configuration name="FirstTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FirstTest - 2018.10.02 at 14h 09m 49s.xml">
       <configuration name="FirstTest" configurationId="JUnit" />
     </history-entry>
@@ -443,6 +437,12 @@
       <configuration name="FirstTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FirstTest - 2018.10.02 at 17h 36m 27s.xml">
+      <configuration name="FirstTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest - 2018.10.02 at 18h 04m 20s.xml">
+      <configuration name="FirstTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FirstTest - 2018.10.02 at 21h 16m 44s.xml">
       <configuration name="FirstTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -906,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/lesson/pages/LaptopsChoicePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        <state relative-caret-position="344">
+          <caret line="57" column="105" lean-forward="false" selection-start-line="57" selection-start-column="105" selection-end-line="57" selection-end-column="105" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
