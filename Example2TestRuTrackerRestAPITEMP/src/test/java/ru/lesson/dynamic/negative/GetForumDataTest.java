@@ -1,9 +1,21 @@
 package ru.lesson.dynamic.negative;
 
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.lesson.BaseTest;
 
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import static org.testng.Assert.assertEquals;
 
 public class GetForumDataTest {
 
@@ -13,7 +25,15 @@ public class GetForumDataTest {
     public void verifyResponseCodeWithEmptyParametr() throws IOException {
         //!forum_id не присвоены значения
         String url = "http://api.rutracker.org/v1/get_forum_data?by=forum_id&val=";
-        baseTest.getStringByUrl(url);
+        //baseTest.getStringByUrl(url);
+        
+        HttpClient client = HttpClientBuilder.create().build();
+        HttpGet request = new HttpGet(url);
+        HttpResponse response = null;
+        response = client.execute(request);
+        //Код ответа 200, при том что параметр не имеет значения!?
+        int statusCode = response.getStatusLine().getStatusCode();
+        System.out.println(statusCode);
     }
 
     @Test
