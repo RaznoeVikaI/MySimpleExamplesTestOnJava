@@ -23,6 +23,9 @@ public class FirstTest extends BaseTest {
                 testDataForFirstTest.getPriceFrom(),
                 testDataForFirstTest.getPriceTo()
         );
+        //Приделан костыль: Thread.sleep(7000);
         laptopsChoicePage.chouseCountDisplayedNotebooksOnPage();
+        //Ждем поялвение 13 элемента
+        //laptopsChoicePage.chouseCountDisplayedNotebooksOnPage2();
     }
 }
