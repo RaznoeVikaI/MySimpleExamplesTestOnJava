@@ -23,11 +23,6 @@ public class FirstTest extends BaseTest {
                 testDataForFirstTest.getPriceFrom(),
                 testDataForFirstTest.getPriceTo()
         );
-        //laptopsChoicePage.showCountOfElements();
-        laptopsChoicePage.showCountOfElements();
         laptopsChoicePage.chouseCountDisplayedNotebooksOnPage();
-        laptopsChoicePage.showCountOfElements();
-        //laptopsChoicePage.showCountOfElements();
-
     }
 }

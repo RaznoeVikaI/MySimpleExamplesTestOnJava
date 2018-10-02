@@ -47,26 +47,14 @@ public class LaptopsChoicePage extends AbstractPage {
         //By.xpath(".//option[contains(text(),'Показывать по 12')]")
         //Кликает по выпадающему списку:"Показать по 12","Показать по 48"
         //--------------------------------------------------------------------
+        List<WebElement> temp = driver.findElements(By.xpath("//div[@class='n-snippet-card2__title']"));
+        System.out.println(temp.size());
         WebElement selectElem = driver.findElement(By.xpath(".//*[@role='listbox']"));
         selectElem.click();
-
         WebElement element = driver.findElement(By.xpath("//span[@class='select__text' and text()='Показывать по 12']"));
         element.click();
-    }
-
-    @Step("Проверяем колличество результатов отбора после нажатия 'Показать по ...'")
-    public void showCountOfElements(){
-        List<WebElement> temp = driver.findElements(By.cssSelector(".n-snippet-card2__title"));
-        System.out.println(temp.size());
-
-        /*(new WebDriverWait(driver, 10))
-                .until(ExpectedConditions
-                        .visibilityOfElementLocated(By.id("menu-id")));
-
-
-        List<WebElement> temp2 = driver.findElements(By.cssSelector(".n-snippet-card2__title"));
-        System.out.println(temp2.size());*/
-
+        List<WebElement> temp2 = driver.findElements(By.xpath("//div[@class='n-snippet-card2__title']"));
+        System.out.println(temp2.size());
     }
 
     public LaptopsChoicePage(WebDriver driver) {
