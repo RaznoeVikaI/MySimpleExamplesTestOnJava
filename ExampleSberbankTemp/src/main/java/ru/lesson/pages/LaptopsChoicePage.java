@@ -53,6 +53,7 @@ public class LaptopsChoicePage extends AbstractPage {
         selectElem.click();
         WebElement element = driver.findElement(By.xpath("//span[@class='select__text' and text()='Показывать по 12']"));
         element.click();
+        WebElement element2 = (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='n-snippet-card2__title']")));
         List<WebElement> temp2 = driver.findElements(By.xpath("//div[@class='n-snippet-card2__title']"));
         System.out.println(temp2.size());
     }
