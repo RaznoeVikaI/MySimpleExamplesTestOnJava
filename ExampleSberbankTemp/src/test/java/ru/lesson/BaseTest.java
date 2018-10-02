@@ -33,7 +33,7 @@ public class BaseTest {
         driver.get("https://yandex.ru");
     }
 
-    /*@After
+/*    @After
     public void tearDown(){
         driver.quit();
     }*/

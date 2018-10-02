@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ComputerTechnikPage extends AbstractPage {
 
-    @FindBy(xpath = "//*[@data-reactid='38']")
+    @FindBy(xpath = "//*[@data-reactid='16']")
     private WebElement laptopsLink;
 
     public WebElement getLaptopsLink() {

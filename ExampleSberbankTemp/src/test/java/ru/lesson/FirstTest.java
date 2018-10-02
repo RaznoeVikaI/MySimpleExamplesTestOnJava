@@ -9,7 +9,7 @@ public class FirstTest extends BaseTest {
 
     @Test
     @Description("Проверка поиска ноутбуков с параметрами поиска")
-    public void test(){
+    public void test() throws InterruptedException {
         //Класс с тестовыми данными
         TestDataForFirstTest testDataForFirstTest = new TestDataForFirstTest();
 
@@ -23,12 +23,11 @@ public class FirstTest extends BaseTest {
                 testDataForFirstTest.getPriceFrom(),
                 testDataForFirstTest.getPriceTo()
         );
-        //laptopsChoicePage.chouseCountDisplayedNotebooksOnPage();
-        //laptopsChoicePage.selectIndex();
+        //laptopsChoicePage.showCountOfElements();
+        laptopsChoicePage.showCountOfElements();
         laptopsChoicePage.chouseCountDisplayedNotebooksOnPage();
-
-        SelectionResultsPage selectionResultsPage = laptopsChoicePage.assertResults();
-        selectionResultsPage.countFindsNotebooksOnPage();
+        laptopsChoicePage.showCountOfElements();
+        //laptopsChoicePage.showCountOfElements();
 
     }
 }
