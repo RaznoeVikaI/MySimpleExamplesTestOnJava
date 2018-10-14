@@ -10,7 +10,7 @@ public class PolindromTest {
 
     @Test
     public void inputStroka(){
-        //base2Test.verifyStroka("Madam, I'm Adam!");
+        //baseTest.verifyStroka("Madam, I'm Adam!");
         baseTest.verifyStroka("Мама");
     }
 

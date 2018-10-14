@@ -3,8 +3,11 @@ package ru.example;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.lang.Character.toLowerCase;
+import static org.testng.AssertJUnit.assertEquals;
+
 public class BaseTest {
-    public boolean verifyStroka(String strokaBefore){
+    public void verifyStroka(String strokaBefore){
         String strokaAfter="";
         String strokaMiddle=strokaBefore.replace(" ","");
         char[] charBefore =strokaMiddle.toCharArray();
@@ -22,7 +25,9 @@ public class BaseTest {
         }
         System.out.println(strokaAfter);
         System.out.println(strokaMiddle);
-        return strokaAfter.equalsIgnoreCase(strokaMiddle);
+        //assertEquals(strokaAfter,strokaMiddle);
+        assertEquals(strokaAfter.toLowerCase(),strokaMiddle.toLowerCase());
+        //return strokaAfter.equalsIgnoreCase(strokaMiddle);
     }
 
 }
