@@ -7,21 +7,9 @@ public class PolindromTest {
 
     BaseTest baseTest = new BaseTest();
 
-
-    @Test
-    public void inputStroka(){
-        //baseTest.verifyStroka("Madam, I'm Adam!");
-        baseTest.verifyStroka("Мама");
-    }
-
     @Test
     public void inputEmptyStroka(){
         baseTest.verifyStroka("");
-    }
-
-    @Test
-    public void inputSpecialSymbols(){
-        baseTest.verifyStroka(")!");
     }
 
     @Test
@@ -34,16 +22,4 @@ public class PolindromTest {
         baseTest.verifyStroka("5");
     }
 
-    @Test
-    public void inputStrokaOnEnglish(){
-        baseTest.verifyStroka(
-                "numeral");
-    }
-
-    @Test
-    public void inputStrokaOnJapane(){
-        baseTest.verifyStroka(
-                "数字"
-        );
-    }
 }

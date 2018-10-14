@@ -7,7 +7,7 @@ import static java.lang.Character.toLowerCase;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class BaseTest {
-    public void verifyStroka(String strokaBefore){
+    public String verifyStroka(String strokaBefore){
         String strokaAfter="";
         String strokaMiddle=strokaBefore.replace(" ","");
         char[] charBefore =strokaMiddle.toCharArray();
@@ -25,9 +25,9 @@ public class BaseTest {
         }
         System.out.println(strokaAfter);
         System.out.println(strokaMiddle);
-        //assertEquals(strokaAfter,strokaMiddle);
-        assertEquals(strokaAfter.toLowerCase(),strokaMiddle.toLowerCase());
         //return strokaAfter.equalsIgnoreCase(strokaMiddle);
+        //assertEquals(strokaAfter.toLowerCase(),strokaMiddle.toLowerCase());
+        return strokaAfter;
     }
 
 }
