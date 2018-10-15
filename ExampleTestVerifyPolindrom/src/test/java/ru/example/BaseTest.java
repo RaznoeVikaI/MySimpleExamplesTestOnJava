@@ -7,7 +7,7 @@ import static java.lang.Character.toLowerCase;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class BaseTest {
-    public String verifyStroka(String strokaBefore){
+    public String reverseStroka(String strokaBefore){
         String strokaAfter="";
         String strokaMiddle=strokaBefore.replace(" ","");
         char[] charBefore =strokaMiddle.toCharArray();

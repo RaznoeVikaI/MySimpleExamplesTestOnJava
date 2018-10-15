@@ -9,17 +9,17 @@ public class PolindromTest {
 
     @Test
     public void inputEmptyStroka(){
-        baseTest.verifyStroka("");
+        baseTest.reverseStroka("");
     }
 
     @Test
     public void inputOneLetter(){
-        baseTest.verifyStroka("v");
+        baseTest.reverseStroka("v");
     }
 
     @Test
     public void inputOneNumeral(){
-        baseTest.verifyStroka("5");
+        baseTest.reverseStroka("5");
     }
 
 }

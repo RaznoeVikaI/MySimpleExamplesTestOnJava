@@ -11,26 +11,26 @@ public class PolindromTest {
 
     @Test
     public void inputSpecialSymbols(){
-        //baseTest.verifyStroka(")!");
-        assertNotEquals(")!",baseTest.verifyStroka(")!"));
+        //baseTest.reverseStroka(")!");
+        assertNotEquals(")!",baseTest.reverseStroka(")!"));
     }
 
     @Test
     public void inputStrokaOnEnglish(){
-        //baseTest.verifyStroka("numeral");
-        assertNotEquals("numeral",baseTest.verifyStroka("numeral"));
+        //baseTest.reverseStroka("numeral");
+        assertNotEquals("numeral",baseTest.reverseStroka("numeral"));
     }
 
     @Test
     public void inputStrokaOnJapane(){
-        //baseTest.verifyStroka("数字");
-        assertNotEquals("数字",baseTest.verifyStroka("数字"));
+        //baseTest.reverseStroka("数字");
+        assertNotEquals("数字",baseTest.reverseStroka("数字"));
     }
 
     @Test
     public void inputStroka(){
-        //baseTest.verifyStroka("Madam, I'm Adam!");
-        //baseTest.verifyStroka("Мама");
-        assertNotEquals("Мама",baseTest.verifyStroka("Мама"));
+        //baseTest.reverseStroka("Madam, I'm Adam!");
+        //baseTest.reverseStroka("Мама");
+        assertNotEquals("Мама",baseTest.reverseStroka("Мама"));
     }
 }
