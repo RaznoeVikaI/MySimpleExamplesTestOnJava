@@ -10,6 +10,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
@@ -31,11 +32,14 @@ public class HttpBasicAuth {
                     new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
                     new UsernamePasswordCredentials("test_user", "test_password"));
 
-            HttpPost httppost = new HttpPost("http://localhost:7000/login");
+            //HttpPost httppost = new HttpPost("http://localhost:7000/login");
+            HttpGet httpGet = new HttpGet("http://localhost:7000/login");
 
-            System.out.println("executing request " + httppost.getRequestLine());
+            //System.out.println("executing request " + httppost.getRequestLine());
+            System.out.println("executing request " + httpGet.getRequestLine());
             HttpResponse response;
-            response = httpclient.execute(httppost);
+            //response = httpclient.execute(httppost);
+            response = httpclient.execute(httpGet);
             HttpEntity entity = response.getEntity();
 
             System.out.println("----------------------------------------");
